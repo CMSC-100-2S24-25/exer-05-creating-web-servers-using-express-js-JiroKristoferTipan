@@ -1,1 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/fO1z5voz)
+# Information
+- Name: Jiro Kristofer Tipan
+- Course: BS Computer Science
+- Section: C-1L
+- Student number: 2023-13538
+
+# Key Takeaways:
+- ExpressJS and Needle are extensions of NodeJS that allow for a server/client interaction through the use of get and post callback functions. Through these, we are able to create 2 separate entities that share and receive data amongst each other.
