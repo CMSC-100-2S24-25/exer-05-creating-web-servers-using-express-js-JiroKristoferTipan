@@ -1,4 +1,5 @@
 import express from 'express';
+import fs from 'fs';
 
 const app = express();
 app.use(express.json());
@@ -19,9 +20,25 @@ app.get(`/add-book`, (req, res) => {
     res.send(`hi`);
 })
 
-app.get(`/find-by-isbn-author`)
+app.get(`/find-by-isbn-author`, (req, res) => {
+    const text = fs.readFileSync("books.txt", "utf-8");
+    text.split("\n");
+    for (let i = 0; i < text.length; i++){
+        if (text[i].includes(req.query.isbn) && text[i].includes(req.query.author)){
+            res.send(text[i]);
+        }
+    }
+})
 
-app.get(`find-by-author`)
+app.get(`find-by-author`, (req, res) => {
+    const text = fs.readFileSync("books.txt", "utf-8");
+    text.split("\n");
+    for (let i = 0; i < text.length; i++){
+        if (text[i].includes(req.query.author)){
+            res.send(text[i]);
+        }
+    }
+})
 
 app.post(`/add-book`, (req, res) => {
     console.log(`hi 2`)
